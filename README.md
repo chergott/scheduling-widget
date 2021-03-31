@@ -1,3 +1,9 @@
+## Screenshot - CPT Codes
+![Screenshot](screenshots/cpt-codes.png)
+
+## Screenshot - Offices
+![Screenshot](screenshots/offices.png)
+
 # scheduling-widget
 
 This README outlines the details of collaborating on this Ember application.
