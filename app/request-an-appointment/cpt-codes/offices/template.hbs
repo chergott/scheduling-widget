@@ -1,0 +1,17 @@
+{{page-title "Offices"}}
+
+<div class="offices">
+  {{#each model as |office|}}
+    <div class="office__card">
+      <div class="office__title">
+        {{office.city}}
+        {{office.name}}
+      </div>
+      <div>{{office.city}}, {{office.state}} {{office.zip}}</div>
+      <div>{{office.phone}}</div>
+      <button>Select</button>
+    </div>
+  {{/each}}
+</div>
+
+{{outlet}}

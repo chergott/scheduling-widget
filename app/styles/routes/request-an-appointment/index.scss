@@ -1,0 +1,57 @@
+@import 'cpt-codes';
+@import 'offices';
+
+.request-an-appointment {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+
+  .appointment-steps {
+    border-right: 1px solid $border-light;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 200px;
+    padding: $keyline * 3;
+  }
+}
+
+.appointment__header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 75px;
+  padding: 0 $keyline * 3;
+  border-bottom: 1px solid $border-light;
+}
+
+.appointment__title {
+  @include font-size--grow(2);
+  margin-right: 2 * $keyline;
+}
+
+.appointment__subtitle {
+  color: $grey-light;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.appointment__close {
+  @include font-size--grow(2);
+  color: $grey-light;
+  padding: $keyline;
+  text-decoration: none;
+}
+
+.appointment__content {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-y: auto;
+}
+
+.appointment__outlet {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: $background-white;
+}

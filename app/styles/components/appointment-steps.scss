@@ -1,0 +1,45 @@
+.appointment-steps {
+  letter-spacing: 1px;
+  line-height: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    margin-bottom: $keyline * 2;
+
+    &:not(.step--completed):not(.step--active) {
+      opacity: 0.3;
+    }
+  }
+}
+
+.step__number {
+  @include font-size--shrink();
+  border-radius: 50%;
+  border: 1px solid $grey-dark;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  margin-right: $keyline;
+}
+
+.step__title {
+  text-transform: uppercase;
+}
+
+.step__selected {
+  color: $blue;
+}
+
+.step--active .step__number {
+  border-color: $blue;
+  color: $blue;
+}

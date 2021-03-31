@@ -1,0 +1,25 @@
+{{page-title "RequestAnAppointment"}}
+
+<div class="request-an-appointment">
+
+  <div class="appointment__header">
+
+    <div class="appointment__title">Request an Appointment</div>
+
+    <div class="appointment__subtitle">The Therapy Center</div>
+
+    <LinkTo @route="request-an-appointment.cpt-codes" @model="{{model.id}}" class="appointment__close">X</LinkTo>
+
+  </div>
+
+  <div class="appointment__content">
+
+    <AppointmentSteps @class="appointment__steps"/>
+
+    <div class="appointment__outlet">
+      {{outlet}}
+    </div>
+
+  </div>
+
+</div>

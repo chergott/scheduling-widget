@@ -1,0 +1,20 @@
+{{page-title "Services"}}
+
+{{#each model as |cptCode|}}
+
+  <div class="cpt-code__block">
+
+    <div class="cpt-code__content">
+      <div class="cpt-code__description">{{cptCode.description}}</div>
+      <div>{{cptCode.duration}} minutes</div>
+    </div>
+
+    <LinkTo class="cpt-code__select-button" @route="request-an-appointment.cpt-codes.offices" @model={{cptCode.id}}>
+      Select
+    </LinkTo>
+
+  </div>
+
+{{/each}}
+
+{{outlet}}

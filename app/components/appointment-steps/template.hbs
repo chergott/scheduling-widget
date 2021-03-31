@@ -1,0 +1,56 @@
+<ul class="appointment-steps">
+
+  <li class="step--completed">
+    <div class="step__number">1</div>
+    <div class="step__content">
+      <div class="step__title">Clinician</div>
+      <div class="step__selected">
+        {{this.appointment.selectedClinician.name}}
+      </div>
+    </div>
+  </li>
+
+  <li class="{{if (eq this.appointment.currentStepIndex 2) "step--active"}} {{if (gt this.appointment.currentStepIndex 2) "step--completed"}}">
+    <div class="step__number">2</div>
+    <div class="step__content">
+      <div class="step__title">
+        {{if (lte this.appointment.currentStepIndex 2) "Select a Service" "Service"}}
+      </div>
+      {{#if this.appointment.selectedCptCode}}
+        <div class="step__selected">
+          {{this.appointment.selectedCptCode.description}}
+          <div>{{this.appointment.selectedCptCode.totalDuration}}</div>
+        </div>
+      {{/if}}
+    </div>
+  </li>
+
+  <li class="{{if (eq this.appointment.currentStepIndex 3) "step--active"}}">
+    <div class="step__number">3</div>
+    <div class="step__content">
+      <div class="step__title">
+        {{if (lte this.appointment.currentStepIndex 3) "Select a Location" "Location"}}
+      </div>
+      {{#if this.appointment.selectedOffice}}
+        <div class="step__selected">
+          {{this.appointment.selectedOffice.description}}
+        </div>
+      {{/if}}
+    </div>
+  </li>
+
+  <li>
+    <div class="step__number">4</div>
+    <div class="step__content">
+      <div class="step__title">Select Date & Time</div>
+    </div>
+  </li>
+
+  <li>
+    <div class="step__number">5</div>
+    <div class="step__content">
+      <div class="step__title">Your Information</div>
+    </div>
+  </li>
+
+</ul>

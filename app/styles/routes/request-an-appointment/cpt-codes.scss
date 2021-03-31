@@ -1,0 +1,27 @@
+.cpt-code__block {
+  @include card;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: $keyline * 3;
+  margin: $keyline * 3;
+
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.cpt-code__content {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.cpt-code__description {
+  @include font-size--grow(2);
+  margin-bottom: $keyline * 2;
+}
+
+.cpt-code__select-button {
+  @include button--contained;
+}

@@ -1,0 +1,7 @@
+@mixin font-size--grow($factor: 1) {
+  font-size: 1rem + ($factor * 0.15);
+}
+
+@mixin font-size--shrink($factor: 1) {
+  font-size: 1rem - ($factor * 0.15);
+}
